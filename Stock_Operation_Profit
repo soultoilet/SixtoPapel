@@ -1,0 +1,57 @@
+stocks = ['Game Stop', 'Hyundai', 'SpaceX']
+stock = input("Please enter the stock you want to buy: ")
+
+from operator import itemgetter, attrgetter
+if stock == "Game Stop" :
+    Game_Stop = {"Monday": 100, "Tuesday": 90, "Wendesday": 95, "Thursday": 90, "Friday": 130}
+    print(Game_Stop)
+    Game_Stop.items()
+    print(sorted(Game_Stop, key = itemgetter(5)))
+    minimum_value = min(Game_Stop.values())
+    minimum_keys = [key for key in Game_Stop if Game_Stop[key] == minimum_value]
+    print("The days and prices for purchasing")
+    print(minimum_keys)
+    print(minimum_value)
+    maximum_value = max(Game_Stop.values())
+    maximum_keys = [key for key in Game_Stop if Game_Stop[key] == maximum_value]
+    print("The days and prices for selling")
+    print(maximum_keys)
+    print(maximum_value)
+    profit = (maximum_value - minimum_value)
+    print("Your profit with this operation:", + profit)
+    
+if stock == "Hyundai" :
+    Hyundai = {"Monday": 100, "Tuesday": 70 , "Wendesday": 95, "Thursday": 90, "Friday": 140}
+    print(Hyundai)
+    Hyundai.items()
+    print(sorted(Hyundai, key = itemgetter(5)))
+    minimum_value = min(Hyundai.values())
+    minimum_keys = [key for key in Hyundai if Hyundai [key] == minimum_value]
+    print("The days and price for purchasing")
+    print(minimum_keys)
+    print(minimum_value)
+    maximum_value = max(Hyundai.values())
+    maximum_keys = [key for key in Hyundai if Hyundai [key] == maximum_value]
+    print("The days and prices for selling")
+    print(maximum_keys)
+    print(maximum_value)
+    profit = (maximum_value - minimum_value)
+    print("Your profit with this operation:", + profit)
+            
+if stock == "SpaceX" : 
+    SpaceX = {"Monday": 100, "Tuesday": 90, "Wendesday": 95, "Thursday": 90, "Friday": 150}
+    print(SpaceX)
+    SpaceX.items()
+    print(sorted(SpaceX, key = itemgetter(5)))
+    minimum_value = min(SpaceX.values())
+    minimum_keys = [key for key in SpaceX if SpaceX [key] == minimum_value]
+    print("The days and price for purchasing")
+    print(minimum_keys)
+    print(minimum_value)
+    maximum_value = max(SpaceX.values())
+    maximum_keys = [key for key in SpaceX if SpaceX [key] == maximum_value]
+    print("The days and prices for selling")
+    print(maximum_keys)
+    print(maximum_value)
+    profit = (maximum_value - minimum_value)
+    print("Your profit with this operation:", + profit)
